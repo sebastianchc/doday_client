@@ -1,0 +1,12 @@
+.textarea {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  @include static-colors;
+  @include dynamic-colors;
+  @include font;
+  border-radius: 2px;
+  padding: 0.5rem;
+  min-height: 5rem;
+  resize: none;
+}

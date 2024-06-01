@@ -1,0 +1,15 @@
+.dropdown {
+  @include position(relative);
+  .button-static-sidebar {
+    width: 100%;
+    @include flex($justify-content: space-between, $align-items: center);
+  }
+  &-options {
+    @include position(absolute, $top: 2.5rem);
+    width: 100%;
+    .button-static-main {
+      border-radius: 0;
+      width: 100%;
+    }
+  }
+}

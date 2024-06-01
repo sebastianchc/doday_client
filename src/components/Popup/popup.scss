@@ -1,0 +1,28 @@
+.popup {
+  border-radius: 4px;
+  width: 25rem;
+  @include static-colors;
+  @include position(relative);
+  &-background {
+    @include position(fixed, 0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.7);
+    @include flex($justify-content: center, $align-items: center);
+    z-index: 1;
+  }
+  &-form {
+    @include grid($grid-template-columns: 2rem auto);
+    gap: 1rem;
+    padding: 1rem;
+    &-submit,
+    &-heading {
+      grid-column: 1 / 3;
+      @include flex($justify-content: end, $align-items: center);
+    }
+    &__icon {
+        @include flex($align-items: center);
+    }
+  }
+}
+.popup-form-submit__text {
+  @include static-colors;
+}

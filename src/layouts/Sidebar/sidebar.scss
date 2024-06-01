@@ -1,0 +1,42 @@
+.sidebar {
+  @include grid($grid-template-rows: min-content min-content auto min-content);
+  row-gap: 1rem;
+  padding: 1rem;
+  @include static-colors;
+  &-header,
+  &-footer {
+    @include flex($justify-content: end, $align-items: center);
+  }
+  &-user {
+    @include grid(
+      $grid-template-columns: 3rem auto,
+      $grid-template-rows: repeat(2, auto)
+    );
+    column-gap: 0.5rem;
+    padding-left: 0.5rem;
+    &__avatar {
+      grid-row: 1 / 3;
+      @include dynamic-colors;
+      border-radius: 3rem;
+      height: 3rem;
+      width: 3rem;
+      @include font($size: 18px, $weight: 600, $line-height: 0);
+      @include flex($justify-content: center, $align-items: center);
+    }
+    &__name {
+      @include font($size: 18px);
+    }
+    &__quote {
+      font-size: 10px;
+    }
+  }
+}
+.sidebar-user__avatar {
+  @include static-colors;
+}
+.sidebar-user__name {
+  @include static-colors;
+}
+.sidebar-user__quote {
+  @include static-colors;
+}

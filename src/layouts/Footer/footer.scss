@@ -1,0 +1,9 @@
+.footer {
+  @include position(sticky, $bottom: 0);
+  @include static-colors;
+  padding: 0 3rem;
+  @include flex($align-items: center);
+}
+.footer__text {
+  @include static-colors;
+}

@@ -1,0 +1,5 @@
+.button-dynamic {
+  @include button;
+  @include dynamic-colors;
+  @include flex($align-items: center);
+}

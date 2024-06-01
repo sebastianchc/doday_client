@@ -1,0 +1,5 @@
+.projects-list {
+  padding: 1rem;
+  @include flex(column);
+  row-gap: 1rem;
+}

@@ -1,0 +1,32 @@
+.logo {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 5rem;
+  @include flex($justify-content: center, $align-items: center);
+  @include static-colors;
+  @include position(relative);
+  &__icon-primary {
+    height: 3rem;
+    width: 2rem;
+    border: 4px solid;
+    border-radius: 0.5rem 3rem 3rem 0.5rem;
+    @include position(absolute, $left: 1.625rem);
+  }
+  &__satelite {
+    height: 1.375rem;
+    width: 1.375rem;
+    border-radius: 1.375rem;
+    @include static-colors;
+    @include flex($justify-content: center, $align-items: center);
+    @include satelite-position;
+  }
+  &__icon-secondary {
+    height: 1rem;
+    width: 1rem;
+    border: 4px solid;
+    border-radius: 1rem;
+  }
+  &__icon {
+    @include dynamic-colors;
+  }
+}

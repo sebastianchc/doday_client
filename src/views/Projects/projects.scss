@@ -1,0 +1,9 @@
+@import "Navbar/projects-navbar";
+@import "List/projects-list";
+@import "List/Item/projects-list-item";
+
+.projects {
+  padding: 4rem 6rem;
+  @include flex(column);
+  row-gap: 1rem;
+}

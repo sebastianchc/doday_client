@@ -1,0 +1,18 @@
+.projects-list-item {
+  @include grid($grid-template-columns: auto);
+  &--size {
+    @include grid($grid-template-columns: auto min-content min-content);
+    column-gap: 1rem;
+  }
+  align-items: center;
+  .button-static-main {
+    height: 3rem;
+    @include flex($justify-content: space-between, $align-items: center);
+  }
+  &__text {
+    @include font($size: 16px);
+  }
+}
+.projects-list-item__text {
+  @include static-colors;
+}

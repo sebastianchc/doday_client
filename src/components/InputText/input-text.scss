@@ -1,0 +1,14 @@
+.input-text {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  @include static-colors;
+  @include dynamic-colors;
+  @include font;
+  border-radius: 2px;
+  &--for-name {
+    @include font(18px);
+    padding: 0.25rem 0.5rem 0;
+    height: 2.25rem;
+  }
+}

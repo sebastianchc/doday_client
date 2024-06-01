@@ -1,0 +1,11 @@
+.button-static-sidebar {
+  @include static-colors;
+}
+.button-static-main {
+  @include static-colors;
+}
+.button-static-main,
+.button-static-sidebar {
+  @include flex($align-items: center);
+  @include button;
+}

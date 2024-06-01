@@ -1,0 +1,315 @@
+@mixin font($size: 14px, $weight: 400, $line-height: 1.5rem) {
+  font: {
+    size: $size;
+    weight: $weight;
+  }
+  line-height: $line-height;
+}
+
+@mixin flex(
+  $flex-direction: row,
+  $justify-content: normal,
+  $align-items: normal
+) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@mixin grid($grid-template-columns: none, $grid-template-rows: none) {
+  display: grid;
+  grid-template-columns: $grid-template-columns;
+  grid-template-rows: $grid-template-rows;
+}
+
+@mixin position(
+  $position: static,
+  $top: auto,
+  $bottom: auto,
+  $right: auto,
+  $left: auto
+) {
+  position: $position;
+  top: $top;
+  bottom: $bottom;
+  right: $right;
+  left: $left;
+}
+
+@mixin dynamic-colors {
+  @for $i from 0 through 23 {
+    &--#{$i} {
+      @if $i == 5 or $i == 6 {
+        @if "#{&}"==".logo__icon--#{$i}" {
+          border-color: $--indigo-purple;
+        } @else if "#{&}"==".input-text--#{$i}" or "#{&}"==".textarea--#{$i}" {
+          &:focus {
+            border-bottom: 2px solid $--indigo-purple;
+          }
+        } @else {
+          background-color: $--indigo-purple;
+        }
+        @if "#{&}"==".button-dynamic--#{$i}" {
+          &:hover {
+            background-color: $--indigo-purple-hover;
+          }
+        }
+      } @else if $i == 7 or $i == 8 {
+        @if "#{&}"==".logo__icon--#{$i}" {
+          border-color: $--cherry-pink;
+        } @else if "#{&}"==".input-text--#{$i}" or "#{&}"==".textarea--#{$i}" {
+          &:focus {
+            border-bottom: 2px solid $--cherry-pink;
+          }
+        } @else {
+          background-color: $--cherry-pink;
+        }
+        @if "#{&}"==".button-dynamic--#{$i}" {
+          &:hover {
+            background-color: $--cherry-pink-hover;
+          }
+        }
+      } @else if $i == 9 or $i == 10 {
+        @if "#{&}"==".logo__icon--#{$i}" {
+          border-color: $--maya-blue;
+        } @else if "#{&}"==".input-text--#{$i}" or "#{&}"==".textarea--#{$i}" {
+          &:focus {
+            border-bottom: 2px solid $--maya-blue;
+          }
+        } @else {
+          background-color: $--maya-blue;
+        }
+        @if "#{&}"==".button-dynamic--#{$i}" {
+          &:hover {
+            background-color: $--maya-blue-hover;
+          }
+        }
+      } @else if $i == 11 or $i == 12 {
+        @if "#{&}"==".logo__icon--#{$i}" {
+          border-color: $--snow-white;
+        } @else if "#{&}"==".input-text--#{$i}" or "#{&}"==".textarea--#{$i}" {
+          &:focus {
+            border-bottom: 2px solid $--snow-white;
+          }
+        } @else {
+          background-color: $--snow-white;
+        }
+        @if "#{&}"==".button-dynamic--#{$i}" {
+          &:hover {
+            background-color: $--snow-white-hover;
+          }
+        }
+      } @else if $i == 13 or $i == 14 {
+        @if "#{&}"==".logo__icon--#{$i}" {
+          border-color: $--lime-green;
+        } @else if "#{&}"==".input-text--#{$i}" or "#{&}"==".textarea--#{$i}" {
+          &:focus {
+            border-bottom: 2px solid $--lime-green;
+          }
+        } @else {
+          background-color: $--lime-green;
+        }
+        @if "#{&}"==".button-dynamic--#{$i}" {
+          &:hover {
+            background-color: $--lime-green-hover;
+          }
+        }
+      } @else if $i == 15 or $i == 16 {
+        @if "#{&}"==".logo__icon--#{$i}" {
+          border-color: $--golden-yellow;
+        } @else if "#{&}"==".input-text--#{$i}" or "#{&}"==".textarea--#{$i}" {
+          &:focus {
+            border-bottom: 2px solid $--golden-yellow;
+          }
+        } @else {
+          background-color: $--golden-yellow;
+        }
+        @if "#{&}"==".button-dynamic--#{$i}" {
+          &:hover {
+            background-color: $--golden-yellow-hover;
+          }
+        }
+      } @else if $i == 17 or $i == 18 {
+        @if "#{&}"==".logo__icon--#{$i}" {
+          border-color: $--brigth-red;
+        } @else if "#{&}"==".input-text--#{$i}" or "#{&}"==".textarea--#{$i}" {
+          &:focus {
+            border-bottom: 2px solid $--brigth-red;
+          }
+        } @else {
+          background-color: $--brigth-red;
+        }
+        @if "#{&}"==".button-dynamic--#{$i}" {
+          &:hover {
+            background-color: $--brigth-red-hover;
+          }
+        }
+      } @else if $i == 19 or $i == 20 {
+        @if "#{&}"==".logo__icon--#{$i}" {
+          border-color: $--midnight-blue;
+        } @else if "#{&}"==".input-text--#{$i}" or "#{&}"==".textarea--#{$i}" {
+          &:focus {
+            border-bottom: 2px solid $--midnight-blue;
+          }
+        } @else {
+          background-color: $--midnight-blue;
+        }
+        @if "#{&}"==".button-dynamic--#{$i}" {
+          &:hover {
+            background-color: $--midnight-blue-hover;
+          }
+        }
+      } @else {
+        @if "#{&}"==".logo__icon--#{$i}" {
+          border-color: $--charcoal-black;
+        } @else if "#{&}"==".input-text--#{$i}" or "#{&}"==".textarea--#{$i}" {
+          &:focus {
+            border-bottom: 2px solid $--charcoal-black;
+          }
+        } @else {
+          background-color: $--charcoal-black;
+        }
+        @if "#{&}"==".button-dynamic--#{$i}" {
+          &:hover {
+            background-color: $--charcoal-black-hover;
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin satelite-position {
+  @for $i from 0 through 23 {
+    &--#{$i} {
+      @if $i == 5 or $i == 6 {
+        @include position(absolute, $top: 0.7rem, $left: 2rem);
+      } @else if $i == 7 or $i == 8 {
+        @include position(absolute, $top: 0.8rem, $left: 2.3rem);
+      } @else if $i == 9 or $i == 10 {
+        @include position(absolute, $top: 1rem, $left: 2.5rem);
+      } @else if $i == 11 or $i == 12 {
+        @include position(absolute, $top: 1.3rem, $left: 2.6rem);
+      } @else if $i == 13 or $i == 14 {
+        @include position(absolute, $top: 1.8rem, $left: 2.7rem);
+      } @else if $i == 15 or $i == 16 {
+        @include position(absolute, $top: 2.3rem, $left: 2.6rem);
+      } @else if $i == 17 or $i == 18 {
+        @include position(absolute, $top: 2.6rem, $left: 2.5rem);
+      } @else if $i == 19 or $i == 20 {
+        @include position(absolute, $top: 2.8rem, $left: 2.3rem);
+      } @else {
+        @include position(absolute, $top: 2.9rem, $left: 2rem);
+      }
+    }
+  }
+}
+
+@mixin static-colors {
+  @for $i from 0 through 23 {
+    &--#{$i} {
+      @if $i == 11 or $i == 12 {
+        @if "#{&}"==".sidebar--#{$i}" or
+          "#{&}"==".button-static-sidebar--#{$i}" or
+          "#{&}"==".popup--#{$i}"
+        {
+          background-color: $--space-black;
+        }
+        @if "#{&}"==".sidebar-user__avatar--#{$i}" or
+          "#{&}"==".popup-form-submit__text--#{$i}"
+        {
+          color: $--space-black;
+        }
+        @if "#{&}"==".sidebar-user__name--#{$i}" or
+          "#{&}"==".sidebar-user__quote--#{$i}" or
+          "#{&}"==".navbar__item--#{$i}" or
+          "#{&}"==".footer__text--#{$i}" or
+          "#{&}"==".heading__title--#{$i}" or
+          "#{&}"==".projects--list-item__text--#{$i}"
+        {
+          color: $--smoke-white;
+        }
+        @if "#{&}"==".input-text--#{$i}" {
+          border-bottom: 1px solid $--smoke-white;
+        }
+        @if "#{&}"==".main--#{$i}" or
+          "#{&}"==".footer--#{$i}" or
+          "#{&}"==".button-static-main--#{$i}" or
+          "#{&}"==".logo--#{$i}" or
+          "#{&}"==".logo__satelite--#{$i}"
+        {
+          background-color: $--night-black;
+        }
+        @if "#{&}"==".button-static-sidebar--#{$i}" or
+          "#{&}"==".input-text--#{$i}"
+        {
+          &:hover {
+            background-color: $--space-black-hover;
+          }
+        }
+        @if "#{&}"==".textarea--#{$i}" {
+          background-color: $--night-black-hover;
+        }
+        @if "#{&}"==".button-static-main--#{$i}" {
+          &:hover {
+            background-color: $--night-black-hover;
+          }
+        }
+      } @else {
+        @if "#{&}"==".sidebar--#{$i}" or
+          "#{&}"==".button-static-sidebar--#{$i}" or
+          "#{&}"==".popup--#{$i}"
+        {
+          background-color: $--sand-white;
+        }
+        @if "#{&}"==".sidebar-user__avatar--#{$i}" or
+          "#{&}"==".popup-form-submit__text--#{$i}"
+        {
+          color: $--sand-white;
+        }
+        @if "#{&}"==".sidebar-user__name--#{$i}" or
+          "#{&}"==".sidebar-user__quote--#{$i}" or
+          "#{&}"==".navbar__item--#{$i}" or
+          "#{&}"==".footer__text--#{$i}" or
+          "#{&}"==".heading__title--#{$i}" or
+          "#{&}"==".projects-list-item__text--#{$i}"
+        {
+          color: $--night-black;
+        }
+        @if "#{&}"==".input-text--#{$i}" {
+          border-bottom: 1px solid $--night-black;
+        }
+        @if "#{&}"==".main--#{$i}" or
+          "#{&}"==".footer--#{$i}" or
+          "#{&}"==".button-static-main--#{$i}" or
+          "#{&}"==".logo--#{$i}" or
+          "#{&}"==".logo__satelite--#{$i}"
+        {
+          background-color: $--smoke-white;
+        }
+        @if "#{&}"==".button-static-sidebar--#{$i}" or
+          "#{&}"==".input-text--#{$i}"
+        {
+          &:hover {
+            background-color: $--sand-white-hover;
+          }
+        }
+        @if "#{&}"==".textarea--#{$i}" {
+          background-color: $--smoke-white-hover;
+        }
+        @if "#{&}"==".button-static-main--#{$i}" {
+          &:hover {
+            background-color: $--smoke-white-hover;
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin button {
+  height: 2rem;
+  padding: 0 1rem;
+  border-radius: 4px;
+}

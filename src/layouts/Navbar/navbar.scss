@@ -1,0 +1,16 @@
+.navbar {
+  padding: 1rem 0;
+  &__list {
+    @include flex(column);
+    row-gap: 0.75rem;
+  }
+  &__item {
+    .button-static-sidebar {
+      width: 100%;
+      column-gap: 1rem;
+    }
+  }
+}
+.navbar__item {
+  @include static-colors;
+}

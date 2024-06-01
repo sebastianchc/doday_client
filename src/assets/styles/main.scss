@@ -1,0 +1,37 @@
+@import "fonts";
+@import "variables";
+@import "mixins";
+
+@import "views/Projects/projects";
+
+@import "layouts/Layout/layout";
+@import "layouts/Header/header";
+@import "layouts/Footer/footer";
+@import "layouts/Sidebar/sidebar";
+@import "layouts/Navbar/navbar";
+
+@import "components/Logo/logo";
+@import "components/Button/ButtonDynamic/button-dynamic";
+@import "components/Button/ButtonStatic/button-static";
+@import "components/Heading/heading";
+@import "components/Popup/popup";
+@import "components/InputText/input-text";
+@import "components/Dropdown/dropdown";
+@import "components/Textarea/textarea";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Monserrat", sans-serif;
+}
+button {
+  border: none;
+  transition: background-color 1s;
+}
+p {
+  @include font;
+}
+ul {
+  list-style: none;
+}
